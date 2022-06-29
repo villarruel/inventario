@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Productos;
+use App\Models\Categorias;
 class ProductosController extends Controller
 {
     
@@ -51,5 +52,11 @@ class ProductosController extends Controller
         return response()->json([
                                     'mensaje'=>'Producto eliminado'
                                 ]);
+    }
+    public function test(){
+        $producto   =   Productos::find(1);
+        $categoria  =   Categorias::find(3);
+        // dd($producto->categorias, $categoria->productos);
+        $producto->delete();
     }
 }

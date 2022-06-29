@@ -1,7 +1,7 @@
 <?php
 
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::controller(ProductosController::class)->prefix('producto')->group(function(){
+    Route::get('/test', 'test');
+});
+
 
 Route::get('{any}', function(){
     return view('app');
