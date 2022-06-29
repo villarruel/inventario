@@ -22,8 +22,8 @@ return new class extends Migration
         }
         Schema::create('categoria_producto', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('categoria_id')->unsigned()->nullable();
-            $table->integer('producto_id')->unsigned()->nullable();
+            $table->integer('categoria_id')->unsigned();
+            $table->integer('producto_id')->unsigned();
             $table->timestamps();
 
             // creamos las llaves foraneas a sus respectivas tablas

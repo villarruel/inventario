@@ -14,4 +14,8 @@ class Productos extends Model
     public function categorias() {
         return $this->belongsToMany(Categorias::class,'categoria_producto', 'producto_id', 'categoria_id');
     }
+
+    public function calificaciones() {
+        return $this->hasMany(Evaluaciones::class,'producto_id', 'id');
+    }
 }
