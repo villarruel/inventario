@@ -17,11 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::controller(ProductosController::class)->prefix('producto')->group(function(){
-    Route::get('/test', 'test');
-});
-
-
-Route::get('{any}', function(){
+Route::get('/{any}', function(){
     return view('app');
-})->where('any', '.*');
+});

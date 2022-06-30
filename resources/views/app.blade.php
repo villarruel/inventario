@@ -19,5 +19,6 @@
     <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
     {{-- CDN de font awesome; para poner iconos en la app--}}
     <script src="https://kit.fontawesome.com/41dfd82ed4.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue-star-rating@next/dist/VueStarRating.umd.min.js"></script>
 </body>
 </html>

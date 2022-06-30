@@ -7,9 +7,9 @@ use App\Models\Productos;
 use App\Models\Categorias;
 class ProductosController extends Controller
 {
-    
+    // metodo get para obtener el listado de productos
     public function index(){
-        $productos  =   Productos::all();
+        $productos  =   Productos::with('categorias')->with('calificaciones')->get();
         return response()->json($productos);
     }
 
